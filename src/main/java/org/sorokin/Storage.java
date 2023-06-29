@@ -15,9 +15,12 @@ public class Storage {
     }
 
     public void InitStorage() {
-        quoteList.add("Риточка, любимая, привет. Как у тебя дела? \n\nТвой любимый муж.");
+        quoteList.add("Риточка, любимая, привет :) Как у тебя дела? \n\nТвой любимый муж.");
         quoteList.add("Любовь моя, ты покушала?\n\nТвой любимый муж.");
         quoteList.add("Сладенькая моя, как у тебя настроение?\n\nТвой любимый муж.");
+        quoteList.add("Я по тебе очень соскучился, любовь моя:)\n\nТвой любимый муж.");
+        quoteList.add("Вечером обниму и расцелую мою сладенькую!\n\nТвой любимый муж.");
+        quoteList.add("Что у нас сегодня на ужин? :) \n\nТвой любимый муж.");
     }
 
     public String getRandQuote()
@@ -26,5 +29,10 @@ public class Storage {
         int randValue = (int)(Math.random() * quoteList.size());
         //Из коллекции получаем цитату со случайным индексом и возвращаем ее
         return quoteList.get(randValue);
+    }
+
+    public String getQuote(int questionNumber)
+    {
+        return quoteList.get(questionNumber);
     }
 }
