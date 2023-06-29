@@ -4,15 +4,23 @@ import java.util.ArrayList;
 
 public class Storage {
     private ArrayList<String> quoteList;
-    Storage()
+
+    public Storage()
     {
         quoteList = new ArrayList<>();
-        quoteList.add("Начинать всегда стоит с того, что сеет сомнения. \n\nБорис Стругацкий.");
-        quoteList.add("80% успеха - это появиться в нужном месте в нужное время.\n\nВуди Аллен");
-        quoteList.add("Мы должны признать очевидное: понимают лишь те,кто хочет понять.\n\nБернар Вербер");
     }
 
-    String getRandQuote()
+    public void ClearStorage() {
+        quoteList.clear();
+    }
+
+    public void InitStorage() {
+        quoteList.add("Риточка, любимая, привет. Как у тебя дела? \n\nТвой любимый муж.");
+        quoteList.add("Любовь моя, ты покушала?\n\nТвой любимый муж.");
+        quoteList.add("Сладенькая моя, как у тебя настроение?\n\nТвой любимый муж.");
+    }
+
+    public String getRandQuote()
     {
         //получаем случайное значение в интервале от 0 до самого большого индекса
         int randValue = (int)(Math.random() * quoteList.size());

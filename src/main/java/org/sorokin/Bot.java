@@ -7,8 +7,8 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class Bot extends TelegramLongPollingBot {
-    final private String BOT_TOKEN = "6358395014:AAFksE5ibYfCcq37UFo1H0IDSSU5M4-mx-M";
-    final private String BOT_NAME = "MyTestSpeakingBot";
+    final private String BOT_TOKEN = "5994129964:AAE3D-Co5qjmpapCPkwbOM4X6-pNCJFKTmw";
+    final private String BOT_NAME = "MyTestSpeaking2Bot";
     Storage storage;
 
     Bot()
@@ -56,12 +56,13 @@ public class Bot extends TelegramLongPollingBot {
 
         //Сравниваем текст пользователя с нашими командами, на основе этого формируем ответ
         if(textMsg.equals("/start"))
-            response = "Приветствую, бот знает много цитат. Жми /get, чтобы получить случайную из них";
-        else if(textMsg.equals("/get"))
+            response = "Риточка, любимая, привет! Целую и обнимаю тебя! Я твой любимый муж и буду узнавать как у тебя дела. Жми /get, чтобы услышать мой вопрос";
+        else if(textMsg.equals("/get")) {
+            storage.ClearStorage();
+            storage.InitStorage();
             response = storage.getRandQuote();
-        else
+        } else
             response = "Сообщение не распознано";
-
         return response;
     }
 }
