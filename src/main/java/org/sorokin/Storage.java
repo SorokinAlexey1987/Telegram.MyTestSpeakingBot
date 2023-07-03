@@ -1,5 +1,10 @@
 package org.sorokin;
 
+import org.jsoup.Jsoup;
+
+import javax.lang.model.util.Elements;
+import javax.swing.text.Document;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Storage {
