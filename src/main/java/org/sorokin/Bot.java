@@ -50,7 +50,7 @@ public class Bot extends TelegramLongPollingBot {
         try{
             if(update.hasMessage() && update.getMessage().hasText())
             {
-                //Извлекаем из объекта сообщение пользователя
+                //Извлекаем из объекта сообщение  пользователяя
                 Message inMess = update.getMessage();
                 //Достаем из inMess id чата пользователя
                 String chatId = inMess.getChatId().toString();
